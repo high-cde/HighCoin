@@ -1,0 +1,8 @@
+[package]
+name = "block-explorer-lite"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "block-explorer-lite"
+path = "src/main.rs"

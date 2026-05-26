@@ -1,0 +1,23 @@
+module system.tx.apply
+
+import ledger
+
+func apply_tx(tx: map) {
+    let t = tx["type"]
+
+    if t == "transfer" {
+        apply_transfer(tx)
+    }
+}
+
+func apply_transfer(tx: map) {
+    let from = tx["from"]
+    let payload = tx["payload"]
+    let to = payload["to"]
+    let amount = payload["amount"]
+    let fee = tx["fee"]
+
+    ledger.debit(from, amount + fee)
+    ledger.credit(to, amount)
+    ledger.credit("acc:fee_pool", fee)
+}

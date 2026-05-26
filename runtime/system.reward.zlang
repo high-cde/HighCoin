@@ -1,0 +1,10 @@
+module system.reward
+
+import ledger
+
+func apply_block_reward(ctx: map) {
+    let validator = ctx["validator_id"]
+    let reward = ctx["block_reward"]
+
+    ledger.mint(validator, reward)
+}

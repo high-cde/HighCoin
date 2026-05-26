@@ -1,0 +1,30 @@
+module system.tx.validator
+
+import ledger
+import crypto
+
+func validate_tx(tx: map) -> bool {
+    let t = tx["type"]
+
+    if t == "transfer" {
+        return validate_transfer(tx)
+    }
+
+    return false
+}
+
+func validate_transfer(tx: map) -> bool {
+    let from = tx["from"]
+    let payload = tx["payload"]
+    let to = payload["to"]
+    let amount = payload["amount"]
+    let fee = tx["fee"]
+
+    if amount <= 0 { return false }
+    if fee < 0 { return false }
+
+    let bal = ledger.balance(from)
+    if bal < amount + fee { return false }
+
+    return true
+}
