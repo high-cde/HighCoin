@@ -1,0 +1,1 @@
+/data/data/com.termux/files/home/Highcoin/target/release/libprotocol.rlib: /data/data/com.termux/files/home/Highcoin/protocol/src/block.rs /data/data/com.termux/files/home/Highcoin/protocol/src/encoding.rs /data/data/com.termux/files/home/Highcoin/protocol/src/lib.rs /data/data/com.termux/files/home/Highcoin/protocol/src/transaction.rs

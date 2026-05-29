@@ -2,10 +2,11 @@
 members = [
     "node",
     "protocol",
-    "rpc",
     "tools/bridgez-cli",
     "tools/block-explorer-lite"
 ]
+
+resolver = "2"
 
 [workspace.package]
 edition = "2021"
