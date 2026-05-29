@@ -1,0 +1,1 @@
+// HighCoin Wallet State Engine
