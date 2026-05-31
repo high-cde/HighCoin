@@ -1,6 +1,6 @@
-use tokio::net::TcpListener;
-use tokio::io::{AsyncReadExt, AsyncWriteExt};
 use serde_json::json;
+use tokio::io::{AsyncReadExt, AsyncWriteExt};
+use tokio::net::TcpListener;
 
 pub async fn start_rpc_server(addr: &str) {
     let listener = match TcpListener::bind(addr).await {

@@ -1,0 +1,28 @@
+{
+  "name": "highcoin",
+  "version": "1.0.0",
+  "description": "Installer ufficiale per un nodo HighCoin completo (RPC + META via NGINX).",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/high-cde/Highcoin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/high-cde/Highcoin/issues"
+  },
+  "homepage": "https://github.com/high-cde/Highcoin#readme",
+  "dependencies": {
+    "@scure/bip32": "^2.2.0",
+    "@scure/bip39": "^2.2.0",
+    "ethereum-cryptography": "^3.2.0"
+  }
+}

@@ -1,11 +1,9 @@
-use node::{state::State, rpc::start_rpc};
-use std::sync::{Mutex, LazyLock};
+use node::{rpc::start_rpc, state::State};
+use std::sync::{LazyLock, Mutex};
 
-static STATE: LazyLock<State> = LazyLock::new(|| {
-    State {
-        height: 0,
-        vm: Mutex::new(node::vm::Vm::new()),
-    }
+static STATE: LazyLock<State> = LazyLock::new(|| State {
+    height: 0,
+    vm: Mutex::new(node::vm::Vm::new()),
 });
 
 #[tokio::main]

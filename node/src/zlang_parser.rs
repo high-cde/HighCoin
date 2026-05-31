@@ -1,4 +1,4 @@
-use crate::zlang_tokenizer::{Token};
+use crate::zlang_tokenizer::Token;
 
 #[derive(Debug, Clone)]
 pub enum Ast {

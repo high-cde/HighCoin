@@ -21,9 +21,7 @@ pub fn tokenize(input: &str) -> Vec<Token> {
             "/" => tokens.push(Token::Slash),
             "(" => tokens.push(Token::LParen),
             ")" => tokens.push(Token::RParen),
-            n if n.parse::<i64>().is_ok() => {
-                tokens.push(Token::Number(n.parse().unwrap()))
-            }
+            n if n.parse::<i64>().is_ok() => tokens.push(Token::Number(n.parse().unwrap())),
             id => tokens.push(Token::Ident(id.to_string())),
         }
     }

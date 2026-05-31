@@ -1,5 +1,5 @@
-use std::sync::Mutex;
 use crate::vm::Vm;
+use std::sync::Mutex;
 
 pub struct State {
     pub height: u64,

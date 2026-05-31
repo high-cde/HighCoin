@@ -1,5 +1,5 @@
-use crate::zlang_tokenizer::tokenize;
 use crate::zlang_parser::{parse, Ast};
+use crate::zlang_tokenizer::tokenize;
 
 #[derive(Debug)]
 pub struct Vm {
