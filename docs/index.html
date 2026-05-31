@@ -1,4 +1,171 @@
-<!-- rebuild Sun May 31 13:52:40 CEST 2026 -->
-<!-- invalidate 1780228581 -->
-<!-- FULL-PURGE 1780228691 -->
-<!-- ABSOLUTE-PURGE 1780228789 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HighCoin — Quantum Blockchain</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+/* ====== GLOBAL ====== */
+body {
+    margin: 0;
+    padding: 0;
+    background: #050505;
+    font-family: "Orbitron", sans-serif;
+    color: #e5e5e5;
+    overflow-x: hidden;
+}
+
+/* ====== GLITCH BACKGROUND ====== */
+.glitch-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #0a0a0a, #111);
+    z-index: -1;
+    animation: bgshift 8s infinite alternate;
+}
+@keyframes bgshift {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(45deg); }
+}
+
+/* ====== HERO ====== */
+.hero {
+    text-align: center;
+    padding: 120px 20px 80px;
+}
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #00eaff;
+    text-shadow: 0 0 20px #00eaff;
+}
+.hero p {
+    font-size: 1.3rem;
+    opacity: 0.8;
+}
+
+/* ====== BUTTONS ====== */
+.btns {
+    margin-top: 40px;
+}
+.btns a {
+    display: inline-block;
+    margin: 10px;
+    padding: 14px 28px;
+    border: 2px solid #00eaff;
+    color: #00eaff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+.btns a:hover {
+    background: #00eaff;
+    color: #000;
+    box-shadow: 0 0 20px #00eaff;
+}
+
+/* ====== COUNTDOWN ====== */
+.countdown-box {
+    margin-top: 60px;
+    font-size: 2rem;
+    color: #ff0066;
+    text-shadow: 0 0 15px #ff0066;
+}
+
+/* ====== MECHA PANEL ====== */
+.panel {
+    margin: 80px auto;
+    width: 90%;
+    max-width: 900px;
+    padding: 30px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: rgba(10,10,10,0.7);
+    box-shadow: 0 0 25px #00eaff55;
+}
+.panel h2 {
+    text-align: center;
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
+}
+.panel p {
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    text-align: center;
+    padding: 40px;
+    opacity: 0.5;
+    font-size: 0.9rem;
+}
+
+</style>
+</head>
+<body>
+
+<div class="glitch-bg"></div>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>HIGHCOIN</h1>
+    <p>The Quantum‑Engineered Blockchain by ZDOS</p>
+
+    <div class="btns">
+        <a href="https://github.com/high-cde/HighCoin">GitHub Repo</a>
+        <a href="#">Start Node</a>
+        <a href="#">Documentation</a>
+    </div>
+
+    <div class="countdown-box" id="countdown">
+        Loading quantum sync…
+    </div>
+</section>
+
+<!-- PANEL -->
+<div class="panel">
+    <h2>Quantum‑Grade Architecture</h2>
+    <p>
+        HighCoin is engineered with a zero‑latency consensus core, 
+        quantum‑safe cryptography, and a modular Rust‑based node architecture.
+        Designed for edge computing, IoT, and high‑density distributed systems.
+    </p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    HighCoin © 2026 — Powered by ZDOS Quantum Framework
+</footer>
+
+<script>
+// ====== COUNTDOWN ======
+function updateCountdown() {
+    const target = new Date("2026-12-31T23:59:59").getTime();
+    const now = Date.now();
+    const diff = target - now;
+
+    if (diff <= 0) {
+        document.getElementById("countdown").innerHTML = "Quantum Sync Active";
+        return;
+    }
+
+    const d = Math.floor(diff / (1000*60*60*24));
+    const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+    const s = Math.floor((diff % (1000*60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+        `${d}d ${h}h ${m}m ${s}s`;
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+
+</body>
+</html>
